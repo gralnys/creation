@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+body {
+    background-color: black;
+    text-align: center;
+}
+
+#cage {
+    width: 100vw;
+    height: 100vh;
+}
+
+#dark_cage {
+    visibility: hidden;
+    width: 50vw;
+    height: 100vh;
+}
+
+#light_cage {
+    visibility: hidden;
+    left: 50vw;
+    width: 50vw;
+    height: 100vh;
+}
+
+#day_text {
+    color: black;
+}
+
+.God-Talk {
+    width: 100%;
+    font-size: 70px;
+    vertical-align: middle;
+    line-height: 100vh;
+    color: white;
+}
+
+#light {
+    width: 100vw;
+    height: 100vh;
+    background-color: #e6e8b7;
+    visibility: hidden;
+}
+
+.light_slide {
+    animation-name: slide_left;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide_left {
+    from {left: 0; width: 100vw;}
+    to {left: 50vw; width: 50vw;}
+}
+
+#thumb {
+    opacity: 0;
+    width: 15vw;
+    height: 15vw;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+}
+
+.make_visible {
+    animation-name: make_visible;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.make_hidden {
+    animation-name: make_hidden;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes make_visible {
+    from {opacity: 0;}
+    to {opacity: 100;}
+}
+
+@keyframes make_hidden {
+    from {opacity: 100;}
+    to {opacity: 0;}
+}
+
+.to_water {
+    animation-name: to_water;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes to_water {
+    from {
+        border-radius: 0;
+        width: 50vw;
+        left: 50vw;
+        top: 0;
+    }
+
+    to {
+        border-radius: 100%;
+        width: 30vw;
+        height: 30vw;
+        left: 50vw;
+        top: 50vh;
+        transform: translate(-50%, -50%);
+        background-color: #5dacf0;
+    }
+}
+
+#firmament {
+    visibility: hidden;
+    background-color: black;
+    border-radius: 100%;
+    border-color: #5dacf0;
+    border-width: 10px;
+    border-style: solid;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+}
+
+.firmament_grow {
+    animation-name: firmament_grow;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes firmament_grow {
+    from {width: 0; height: 0;}
+    to {width: 35vw; height: 35vw;}
+}
+
+a {
+    visibility: hidden;
+}
+
+button {
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+}
+
+.flatten {
+    animation-name: flatten;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flatten {
+    from {
+        border-radius: 100%;
+        width: 30vw;
+        height: 30vw;
+        left: 50vw;
+        top: 50vh;
+        transform: translate(-50%, -50%);
+        background-color: #5dacf0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        left: 0;
+        top: 70vh;
+        width: 100vw;
+        height: 30vh;
+        border-radius: 0;
+        background-color: #5dacf0;
+    }
+}
+
+#ground {
+    background-color: #6b4523;
+    top: 100vh;
+    width: 100vw;
+    height: 0;
+}
+
+.grow_ground {
+    animation-name: grow_ground;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes grow_ground {
+    from {
+        height: 0;
+        top: 100vh;
+    }
+
+    to {
+        height: 25vh;
+        top: 75vh;
+    }
+}
+
+.tree {
+    width: 25vw;
+    height: 50vh;
+}
+
+#tree1 {
+    top: 40vh;
+    left: 5vw;
+}
+
+#tree2 {
+    top: 50vh;
+    left: 25vw;
+}
+
+#tree3 {
+    top: 40vh;
+    left: 45vw;
+}
+
+#tree4 {
+    top: 50vh;
+    left: 65vw;
+}
+
+.tree {
+    opacity: 0;
+}
+
+.show_trees {
+    animation-name: show_trees;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show_trees {
+    from {opacity: 0;}
+    to {opacity: 100;}
+}
+
+#day {
+    left: 100vw;
+    width: 0;
+    height: 100vh;
+    background-color: #e6e8b7;
+}
+
+.create_day {
+    animation-name: create_day;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes create_day {
+    from {
+        left: 100vw;
+        width: 0;
+    }
+
+    to {
+        left: 50vw;
+        width: 50vw;
+    }
+}
+
+#sun {
+    visibility: hidden;
+    width: 10vw;
+    height: 10vw;
+    transform: translate(-50%, -50%);
+    left: 80vw;
+    top: 20vh;
+}
+
+#moon {
+    visibility: hidden;
+    width: 10vw;
+    height: 10vw;
+    transform: translate(-50%, -50%);
+    left: 20vw;
+    top: 20vh;
+}
+
+#stars {
+    width: 0;
+    height: 100vh;
+}
+
+.set_stars {
+    animation-name: set_stars;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes set_stars {
+    from {width: 0;}
+    to {width: 50vw;}
+}
+
+#fish {
+    visibility: hidden;
+    left: 92vw;
+    top: 70vh;
+    height: 5vh;
+}
+
+#bird1 {
+    visibility: hidden;
+    left: 30vw;
+    top: 30vh;
+    width: 7vw;
+}
+
+#bird2 {
+    visibility: hidden;
+    left: 55vw;
+    top: 10vh;
+    width: 9vw;
+    transform: scaleX(-1);
+}
+
+#cow {
+    visibility: hidden;
+    width: 20vw;
+    left: 37vw;
+    top: 65vh;
+}
+
+#pig {
+    visibility: hidden;
+    left: 3vw;
+    top: 75vh;
+    width: 10vw;
+}
+
+#man {
+    left: 60vw;
+    top: 65vh;
+    visibility: hidden;
+}
+
+#head {
+    position: relative;
+    background-color: #d2b48c;
+    border-radius: 100%;
+    width: 5vw;
+    height: 5vw;
+    top: 0;
+}
+
+#body {
+    position: relative;
+    background-color: #d2b48c;
+    border-radius: 10px;
+    width: 5vw;
+    height: 7vw;
+}
